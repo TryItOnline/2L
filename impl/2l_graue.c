@@ -166,13 +166,13 @@ static void run(char **code, int lines, int maxline)
 			else if (dir == LEFT)
 			{
 				/* decrement the current cell */
-				((int) mem[cell])--;
+				mem[cell]--;
 			}
 			else
 			{
 				/* increment the current cell */
 				assert(dir == RIGHT);
-				((int) mem[cell])++;
+				mem[cell]++;
 			}
 		}
 		else if (c == '+') /* conditional turn */
