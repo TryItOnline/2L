@@ -246,7 +246,7 @@ static /*@null@*/ char *read_arbitrary_length_string(FILE *fp)
 		}
 		p = p2;
 		if (fgets(&p[size/2-1], size/2+1, fp) == NULL)
-			return NULL; /* invalid; file must end with newline */
+			return p;
 	}
 
 	*q = '\0';
